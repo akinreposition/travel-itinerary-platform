@@ -15,14 +15,14 @@ const menuItems = [
 export default function Sidebar() {
   return (
     <div className="w-64 bg-white border-r border-gray-200 flex flex-col">
-      <div className="p-4 border-b border-gray-200">
+      {/* <div className="p-4 border-b border-gray-200">
         <div className="flex items-center space-x-2">
           <div className="w-8 h-8 bg-blue-600 rounded flex items-center justify-center">
             <span className="text-white font-bold text-sm">GO</span>
           </div>
           <span className="font-semibold text-gray-900">GoTravel</span>
         </div>
-      </div>
+      </div> */}
 
       <nav className="flex-1 p-4">
         <ul className="space-y-2">
