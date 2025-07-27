@@ -9,6 +9,7 @@ import TripItineraries from "@/components/trip-itineraries"
 import type { Flight, Hotel, Activity } from "@/types"
 
 export default function Home() {
+  const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false)
   const [flights, setFlights] = useState<Flight[]>([
     {
       id: "1",
@@ -127,10 +128,19 @@ export default function Home() {
   }
 
   return (
-    <div className="flex min-h-screen bg-gray-50">
-      <Sidebar />
-      <div className="flex-1">
-        <Header />
+    <div className="min-h-screen bg-gray-50">
+      <Header />
+      <div className="hidden md:flex">
+          <Sidebar />
+        {/* Mobile Sidebar (conditionally rendered) */}
+        {isMobileSidebarOpen && (
+          <div className="fixed inset-0 z-40 md:hidden">
+            <div className="absolute inset-0 bg-black/30" onClick={() => setIsMobileSidebarOpen(false)} />
+            <div className="relative z-50 h-full w-64 bg-white">
+              <Sidebar />
+            </div>
+          </div>
+        )}
         <main className="p-6">
           <ItineraryHeader />
           <ActionCards onAddFlight={addFlight} onAddHotel={addHotel} onAddActivity={addActivity} />

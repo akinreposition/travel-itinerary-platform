@@ -30,31 +30,34 @@ A comprehensive travel itinerary platform built with React, TypeScript, and Tail
 ### Installation
 
 1. Clone the repository:
-\`\`\`bash
-git clone <repository-url>
+```bash
+git clone https://github.com/akinreposition/travel-itinerary-platform.git
 cd travel-itinerary-platform
-\`\`\`
+```
 
 2. Install dependencies:
-\`\`\`bash
+```bash
 npm install
-\`\`\`
+
+```
 
 3. Create a `.env.local` file in the root directory:
-\`\`\`env
-NEXT_PUBLIC_RAPIDAPI_KEY=your_rapidapi_key_here
-\`\`\`
+```bash
+env: NEXT_PUBLIC_RAPIDAPI_KEY=your_rapidapi_key_here
+
+```
 
 4. Run the development server:
-\`\`\`bash
+```bash
 npm run dev
-\`\`\`
+
+```
 
 5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Project Structure
 
-\`\`\`
+```bash
 ├── app/
 │   ├── page.tsx                 # Main itinerary page
 │   ├── layout.tsx              # Root layout
@@ -78,7 +81,7 @@ npm run dev
 ├── types/
 │   └── index.ts                # TypeScript type definitions
 └── components/ui/              # Reusable UI components
-\`\`\`
+```
 
 ## API Integration
 
@@ -131,15 +134,15 @@ To integrate with the real Booking.com API:
 
 ## Deployment
 
-### Vercel (Recommended)
+### Netlify
 1. Push your code to GitHub
-2. Connect your repository to Vercel
-3. Add your environment variables in Vercel dashboard
+2. Connect your repository to Netlify
+3. Add your environment variables in Netlify dashboard
 4. Deploy automatically
 
 ### Other Platforms
 The app can be deployed to any platform that supports Next.js:
-- Netlify
+- Vercel
 - AWS Amplify
 - Railway
 - DigitalOcean App Platform
