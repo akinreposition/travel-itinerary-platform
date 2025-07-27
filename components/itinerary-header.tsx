@@ -1,4 +1,4 @@
-import { ArrowLeft, MoreHorizontal } from "lucide-react"
+import { ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import banner from "@/app/asset/banner.png"
