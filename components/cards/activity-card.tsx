@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import type { Activity } from "@/types"
 import Image from "next/image"
+import Art from "@/app/asset/Art.png"
 
 interface ActivityCardProps {
   activity: Activity
@@ -17,7 +18,7 @@ export default function ActivityCard({ activity, onRemove }: ActivityCardProps) 
       <CardContent className="p-4">
         <div className="flex space-x-4">
           <div className="relative w-32 h-24 rounded-lg overflow-hidden">
-            <Image src={activity.image || "/placeholder.svg"} alt={activity.name} fill className="object-cover" />
+            <Image src={Art} alt={activity.name} fill className="object-cover" />
           </div>
 
           <div className="flex-1">
@@ -79,6 +80,7 @@ export default function ActivityCard({ activity, onRemove }: ActivityCardProps) 
           </div>
         </div>
 
+      </CardContent>
         <Button
           variant="ghost"
           size="sm"
@@ -87,7 +89,6 @@ export default function ActivityCard({ activity, onRemove }: ActivityCardProps) 
         >
           <X className="w-4 h-4" />
         </Button>
-      </CardContent>
     </Card>
   )
 }

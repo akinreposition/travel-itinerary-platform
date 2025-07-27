@@ -1,6 +1,5 @@
 "use client"
 
-import { MapPin, Building2, Plane } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { useState } from "react"
@@ -21,10 +20,9 @@ export default function ActionCards({ onAddFlight, onAddHotel, onAddActivity }: 
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-        <Card className="bg-gray-800 text-white">
+        <Card className="bg-[#000031] text-white">
           <CardContent className="p-6">
             <div className="flex items-center space-x-3 mb-4">
-              <MapPin className="w-6 h-6" />
               <h3 className="text-lg font-semibold">Activities</h3>
             </div>
             <p className="text-sm text-gray-300 mb-4">
@@ -36,16 +34,15 @@ export default function ActionCards({ onAddFlight, onAddHotel, onAddActivity }: 
           </CardContent>
         </Card>
 
-        <Card className="bg-gray-700 text-white">
+        <Card className="bg-[#E7F0FF] text-white">
           <CardContent className="p-6">
             <div className="flex items-center space-x-3 mb-4">
-              <Building2 className="w-6 h-6" />
-              <h3 className="text-lg font-semibold">Hotels</h3>
+              <h3 className="text-black text-lg font-semibold">Hotels</h3>
             </div>
-            <p className="text-sm text-gray-300 mb-4">
+            <p className="text-sm text-[#1D2433] mb-4">
               Build personalized and optimized your itineraries with our trip planner.
             </p>
-            <Button className="w-full bg-gray-600 hover:bg-gray-500" onClick={() => setActiveModal("hotel")}>
+            <Button className="w-full bg-[#0D6EFD] hover:bg-gray-500" onClick={() => setActiveModal("hotel")}>
               Add Hotels
             </Button>
           </CardContent>
@@ -54,13 +51,12 @@ export default function ActionCards({ onAddFlight, onAddHotel, onAddActivity }: 
         <Card className="bg-blue-600 text-white">
           <CardContent className="p-6">
             <div className="flex items-center space-x-3 mb-4">
-              <Plane className="w-6 h-6" />
               <h3 className="text-lg font-semibold">Flights</h3>
             </div>
             <p className="text-sm text-gray-300 mb-4">
               Build personalized and optimized your itineraries with our trip planner.
             </p>
-            <Button className="w-full bg-blue-500 hover:bg-blue-400" onClick={() => setActiveModal("flight")}>
+            <Button className="w-full bg-white text-[#1D2433] hover:bg-blue-400" onClick={() => setActiveModal("flight")}>
               Add Flights
             </Button>
           </CardContent>

@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import type { Hotel } from "@/types"
 import Image from "next/image"
+import Resort from "@/app/asset/Resort.png"
 
 interface HotelCardProps {
   hotel: Hotel
@@ -17,7 +18,7 @@ export default function HotelCard({ hotel, onRemove }: HotelCardProps) {
       <CardContent className="p-4">
         <div className="flex space-x-4">
           <div className="relative w-32 h-24 rounded-lg overflow-hidden">
-            <Image src={hotel.image || "/placeholder.svg"} alt={hotel.name} fill className="object-cover" />
+            <Image src={Resort} alt={hotel.name} fill className="object-cover" />
           </div>
 
           <div className="flex-1">
