@@ -4,6 +4,7 @@ import { useState } from "react"
 import Sidebar from "@/components/sidebar"
 import Header from "@/components/header"
 import ItineraryHeader from "@/components/itinerary-header"
+import ItineraryHeaderContent from "@/components/itinerary-header-content"
 import ActionCards from "@/components/action-cards"
 import TripItineraries from "@/components/trip-itineraries"
 import type { Flight, Hotel, Activity } from "@/types"
@@ -143,6 +144,7 @@ export default function Home() {
         )}
         <main className="p-6">
           <ItineraryHeader />
+          <ItineraryHeaderContent />
           <ActionCards onAddFlight={addFlight} onAddHotel={addHotel} onAddActivity={addActivity} />
           <TripItineraries
             flights={flights}
