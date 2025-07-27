@@ -1,7 +1,7 @@
 import type { Flight, Hotel, Activity, SearchFlightParams, SearchHotelParams, SearchActivityParams } from "@/types"
 
-const RAPIDAPI_KEY = process.env.NEXT_PUBLIC_RAPIDAPI_KEY || "cac401427msh3afb92c41b58d5ap17c1d9jsnddb5cfffc94e"
-const RAPIDAPI_HOST = "booking-com15.p.rapidapi.com"
+const RAPIDAPI_KEY = process.env.NEXT_PUBLIC_RAPIDAPI_KEY 
+const RAPIDAPI_HOST = process.env.NEXT_PUBLIC_RAPIDAPI_HOST
 
 const headers = {
   "X-RapidAPI-Key": RAPIDAPI_KEY,
